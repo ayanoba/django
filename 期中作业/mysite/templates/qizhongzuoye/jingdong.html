@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>python+selenium+mysql</title>  
+    <style type="text/css">
+        body {
+            background-color: pink; padding:25px;    
+        }
+ 
+    </style>
+</head>
+<body>
+    <center><h1>京东手机排行<img src="/static/jd.jpg"  alt="京东logo" /></h1>
+    <p><a href="http://127.0.0.1:8000/qizhongzuoye/douban/" >我是一个豆瓣电影top250的链接</a> 
+     ||  <a href ="http://127.0.0.1:8000/qizhongzuoye/index/">返回首页</a></p>
+    
+            <table border="6">
+
+                     <tr>
+                        <th>排名</th>
+                        <th>手机名</th>
+                        <th>价格</th>
+                        <th>销量</th>
+                        </tr>
+                        
+                        {% for a  in  mobeils %}
+                            <tr>
+                                <td>{{a.id}}</td>
+                                <td>{{a.title}}</td>
+                                <td>{{a.price}}</td>
+                                <td>{{a.comment}}</td>
+                            </tr>
+                        {% endfor%}
+                        </table></center>
+</body>
